@@ -1995,3 +1995,8 @@ addcompletions
 export ANDROID_BUILD_TOP=$(gettop)
 
 . $ANDROID_BUILD_TOP/vendor/corvus/build/envsetup.sh
+
+function repopick() {
+    T=$(gettop)
+    $T/vendor/corvus/build/tools/repopick.py $@
+}
