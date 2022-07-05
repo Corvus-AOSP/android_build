@@ -653,6 +653,10 @@ function print_lunch_menu()
 
 function lunch()
 {
+    echo "";
+    cat $(gettop)/build/make/corvus_ascii_logo;
+    echo"";
+    
     local answer
 
     if [[ $# -gt 1 ]]; then
@@ -757,10 +761,6 @@ function lunch()
     set_stuff_for_environment
     [[ -n "${ANDROID_QUIET_BUILD:-}" ]] || printconfig
     destroy_build_var_cache
-
-    echo "";
-    cat $(gettop)/build/make/corvus_ascii_logo;
-    echo"";
 }
 
 unset COMMON_LUNCH_CHOICES_CACHE
