@@ -707,6 +707,10 @@ function print_lunch_menu()
 
 function lunch()
 {
+    echo "";
+    cat $(gettop)/build/make/corvus_ascii_logo;
+    echo"";
+    
     local answer
 
     if [[ $# -gt 1 ]]; then
@@ -819,10 +823,6 @@ function lunch()
     if [[ -n "${CHECK_MU_CONFIG:-}" ]]; then
       check_mu_config
     fi
-
-    echo "";
-    cat $(gettop)/build/make/corvus_ascii_logo;
-    echo"";
 }
 
 unset COMMON_LUNCH_CHOICES_CACHE
